@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio, Marco Peters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<a class="logo">
+								<span class="symbol"><img src="images/wordicon1.png" alt="" /></span><span class="title">English</span>
+							</a>
+								<a class="logo">
+								</span><span class="title">/</span>
+							</a>
+								<a href="2.6.1 Airbnb.html" class="logo">
+								</span><span class="title">Norsk</span>
+							</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<h1>M E N U</h1>
+					<ul>
+						<li><a href="1.2 Home.html">Home</a></li>
+						<li><a href="2.7.2 Apple.html">- Apple (Power BI analysis)</a></li>
+						<li><strong>- Airbnb (Power BI report)</strong></a></li>
+						<li><a href="2.5.2 Covid-19.html">- Covid-19 (Python project)</a></li>
+						<li><a href="2.4.2 Bike-sharing.html">- Bike-sharing (SQL / Power BI project)</a></li>
+						<li><a href="2.3.2 Icecold.html">- Icecold (Qlik dashboard)</a></li>
+						<li><a href="2.2.2 Price-calculus.html">- Price calculator (Excel project)</a></li>
+						<li><a href="2.1.2 Seafood.html">- Seafood (report overview)</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+				<div id="main">
+					<div class="inner">
+						<h1>Project: Airbnb</h1>
+						<h4 style="margin-bottom: 0px;">Introduction</h4>
+						<p>This one-pager is a personal project I made in order to learn some new functions in Power BI. The datasets I downloaded 
+							from Kaggle and contain extensive data on Airbnb prices in some of the most popular cities in Europe.
+							Each row in the dataset contains information about one completed overnight stay via Airbnb in 2021. The data contains
+							variables such as price, location, date, whether you rent an entire apartment or a room in a shared apartment, etc.
+							In addition, it contains information about the Airbnb experience, such as how satisfied the customer was with the stay and whether the landlord is a
+							so-called "superhost". You can find the report below here, click on the image to test it in the Power BI app.
+						<br><br>
+						<a href="https://app.powerbi.com/groups/me/reports/cdc65a6c-2ee1-4707-a29d-06dedc25f98d/ReportSection?experience=power-bi" class="logo">
+							<span class="image main"><img src="images/Airbnb1.PNG" alt="" /></span> </a>
+						<h4 style="margin-bottom: 0px;">Analysis</h4>
+						<p>After processing the data in Power Query, the overall dataset contained over 50,000 registered overnight stays in 10 different cities. 
+							It is important to note that this data is not necessarily representative for the Airbnb-market in any of these cities. This data is not complete enough to provide a basis for any conclusions.</p>
+						<p>According to the data, Amsterdam is the most expensive city for an overnight stay through Airbnb. With an average price of 287 euros 
+							per night, Amsterdam is considerably more expensive than Athens, the least expensive city with an average price of 88 euros per night. 
+							More than half of all bookings were weekend-bookings, but the price level during weekends and weekdays is approximately the same. 
+							One explanation may be that both supply and demand are highest during weekends. One factor that has a clear influence on price 
+							is whether a listing is registered as a so-called "business listing". These listings are particularly suitable for people who use Airbnb 
+							for "business", and cities with a low share of these listings tend to have higher average prices. This may indicate that prices are 
+							pushed up by non-business related overnight stays. Other price-driving factors are whether a listing is located near the city centre or 
+							a metro station.</p>
+						<p>As a mini-case, I combined this dataset with a dataset on prices of sold apartments in Amsterdam during the same period. As both 
+							data sets contained coordinates and price, I compared different areas of the city to see if housing prices and prices of Airbnb 
+							listings were correlated. The least expensive Amsterdam neighborhood on Airbnb was "Zuidoost" with an average nightly price of 
+							167 euros. The most expensive neighbourhood was, unsurprisingly perhaps, the city centre, with an average of €355 per night. 
+							This price difference is also reflected in the price difference of sold apartments in these two areas. Square meter prices in 
+							the city center were also on average over 100% higher than in "Zuidoost". In the "Noord" district, a large share of Airbnb-listings 
+							were "business listings" and were conducted during weekdays. This indicates that this is an area that is often visited by people 
+							that are in Amsterdam for "business". In this district, both housing prices and prices of Airbnb-listings are considerably lower 
+							than in the city centre. This again indicates that it is not business, but most likely tourism that drives up prices in a city like Amsterdam.</p>
+					</div>
+				</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+					</div>
+				</footer>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html><!DOCTYPE HTML>

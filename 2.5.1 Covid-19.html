@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio, Marco Peters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<a href="2.5.2 Covid-19.html" class="logo">
+								<span class="symbol"><img src="images/wordicon1.png" alt="" /></span><span class="title">English</span>
+							</a>
+								<a class="logo">
+								</span><span class="title">/</span>
+							</a>
+								<a class="logo">
+							</span><span class="title">Norsk</span>
+							</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Meny</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<h1>M E N Y</h1>
+					<ul>
+						<li><a href="index.html">Hjem</a></li>
+						<li><a href="2.7.1 Apple.html">- Apple (Power BI analyse)</a></li>
+						<li><a href="2.6.1 Airbnb.html">- Airbnb (Power BI rapport)</a></li>
+						<li><strong>- Covid-19 (Python prosjekt)</strong></a></li>
+						<li><a href="2.4.1 Bysykkel.html">- Bysykkel (SQL / Power BI prosjekt)</a></li>
+						<li><a href="2.3.1 Iskald.html">- Iskald (Qlik dashboard)</a></li>
+						<li><a href="2.2.1 Priskalkyle.html">- Priskalkyle (Excel prosjekt)</a></li>
+						<li><a href="2.1.1 Sjomat.html">- Sjømat (Rapportoversikt)</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+				<div id="main">
+					<div class="inner">
+						<h1>Prosjekt: Covid-19</h1>
+						<h4 style="margin-bottom: 0px;">Introduksjon</h4>
+						<p>Som et avsluttende prosjekt på to Python-kurs jeg tok i 2022, analyserte jeg data av registrerte tilfeller og 
+							dødsfall av Covid-19 i land verden rundt. Disse Python-kursene, "Data Analysis with Python" og "Data Visualization with 
+							Python", er laget av IBM og hostet av Coursera. Målet med prosjektet var å se om det fantes en korrelasjon mellom 
+							et lands registrerte tilfeller og dødsfall av Covid-19 på den ene siden, og variabler som forventet levealder og BNP på 
+							den andre siden. For dette prosjekter brukte jeg Jupyter Notebook, og hele Python-skriptet har jeg lagt ved under her. 
+							Datasettene jeg har brukt består av (1) Covid-19 tilfeller, (2) Covid-19 dødsfall, (3) FN sin årlige "worldwide happiness 
+							report" og (4) verdensbefolkningen per land. De første to datasettene består av daglige oppdateringer av antall registrerte 
+							tilfeller eller dødsfall i perioden januar 2020 til oktober 2022. Det tredje datasettet består altså av data fra FN,
+							med målbare variabler som BNP per innbygger og forventet levealder i et land. Blant annet på grunn av disse to variablene 
+							vurderes de nordiske landene som verdens lykkeligste i denne rapporten, noe vi ser under "overall rank" i datasettet. </p>
+						<img src="images/Cov1.PNG" style="margin-right: 1%; margin-bottom: 0em;">
+						<img src="images/Cov2.PNG" style="margin-right: 1%; margin-bottom: 1em;">
+						<h4 style="margin-bottom: 0px;">Databehandling</h4>
+						<p>De neste stegene handlet om databehandling. Jeg fjernet noen unødvendige kolonner og aggregerte tre av datasettene for 
+							å unngå å ha med provinser/fylker til ulike land. Deretter laget jeg noen ulike variabler. Jeg ønsket å vite hva som var det 
+							høyeste antall registrerte tilfeller av Covid-19 i et land i løpet av én dag. Dette har jeg kalt for "max infect rate", eller 
+							<i>den maksimale infeksjonsraten</i>. For å regne ut dette tok jeg høyde for at antall tilfeller og dødsfall hver dag 
+							har blitt aggregert; hver dag viser dermed det samlede antall tilfeller og dødsfall sålangt. Det er noen klare utfordringer 
+							med denne variabelen, nemlig at antall registrerte tilfeller av Covid-19 i mange ble etterregistrert eller ikke registrert 
+							i det hele tatt.Denne variabelen vil dermed kun indikere hvordan situasjonen i et land kan ha vært og når smittetoppene har 
+							oppstått. Til slutt endrer jeg også navn på et par kolonner. </p>
+						<img src="images/Cov3.PNG" style="margin-right: 1%; margin-bottom: 0em;">
+						<img src="images/Cov4.PNG" style="margin-right: 1%; margin-bottom: 0em;">
+						<img src="images/Cov5.PNG" style="margin-right: 1%; margin-bottom: 0em;">
+						<img src="images/Cov6.PNG" style="margin-right: 1%; margin-bottom: 1em;">
+						<p>I neste steg aggregerer jeg også dataen fra "world happiness report" og lager jeg et nytt dataframe der jeg kun beholder 
+							de parametrene jeg vurderer som mest relevant. Jeg ønsker først og fremst å se om jeg finner en korrelasjon mellom 
+							BNP per innbygger (GDP per capita) og forventet levealder (healthy life expectancy). For øvrig er "healthy life expectancy" 
+							en modifikasjon av forventet levealder, ettersom den kun teller antall år man er forventet å leve i god helse, altså uten 
+							sykdom eller skader. Kort oppsummert består nå alle datasettene av variabelen "Country/region", mellom 1 og 3 tilleggskolonner og mellom 
+							156 og 263 rader.</p>
+						<img src="images/Cov7.PNG" style="margin-right: 1%; margin-bottom: 1em;">
+						<img src="images/Cov8.PNG" style="margin-right: 1%; margin-bottom: 1em;">
+						<p>Ettersom vi har én felles variabel, nemlig "Country/region", samler jeg alle datasettene gjennom en "inner join". 
+							Jeg legger også til 3 kolonner; nemlig antall tilfeller, antall dødsfall og høyest antall smittetilfeller i løpet av én 
+							dag per 1000 innbyggere. Før jeg ser på eventuelle korrelasjoner, bruker jeg "describe" for å få en oversikt og 
+							forståelse av alle kolonnene.</p>
+						<img src="images/Cov9.PNG" style="margin-right: 1%; margin-bottom: 1em;">
+						<img src="images/Cov10A.PNG" style="margin-right: 1%; margin-bottom: 1em;">
+
+						<h4 style="margin-bottom: 0px;">Korrelasjon og visualisering</h4>
+						<p>Med kommandoen "corr" kan vi se etter parvis korrelasjon i dataen. Korrelasjon måler hvordan variabler henger 
+							sammen med hverandre, der 0 tyder på ingen korrelasjon og 1 på perfekt korrelasjon. I vårt datasett ser vi tydelig 
+							at det er flere variabler som er korrelerte. BNP per innbygger ("GDP_per_capita") og 
+							forventet levealder ("healthy life expectancy") har for eksempel en korrelasjon på 0.86. Dette vil si at det er en 
+							sterk positiv sammenheng mellom BNP per innbygger og forventet levealder i et land. Det som nok er 
+							mest interessant for vår studie, er korrelasjonen mellom BNP per innbygger, forventet levealder, og de tre 
+							variablene vi utarbeidet i forrige seksjon. Korrelasjonen mellom GDP_per_capita og "cases_per_1000", altså 
+							antall tilfeller av Covid-19 per 1000 innbyggere, er på 0.69. Korrelasjonen mellom denne variabelen og forventet 
+							levealder er på 0.7. Dette er også vist nedenfor i to ulike spredningsdiagrammer. </p>
+						<img src="images/Cov10B.PNG" style="margin-right: 1%; margin-bottom: 1em;">
+						<img src="images/Cov11.PNG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 1em;">
+						<img src="images/Cov12.PNG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 2em;">
+						<p>Også mellom den maksimale infeksjonsraten og BNP per innbygger / forventet levealder ser vi 
+							en positiv korrelasjon på henholdsvis 0.48 og 0.49. Dette indikerer at jo rikere befolkningen i et land er, målt 
+							i BNP per innbygger, jo flere tilfeller av Covid-19 det har blitt registrert. Dessuten er registrert antall tilfeller 
+							høyere for land med høy forventet levealder. Én fornuftig forklaring for dette kan være at det registreres flere 
+							tilfeller i rike land, ettersom disse ofte har systemene til å registrere slikt på plass. Ettersom det har vært store 
+							mørketall på antall smittetilfeller i ulike land, betyr dette dermed ikke nødvendigvis at det har vært flere tilfeller 
+							av Covid19 i land med høy BNP per innbygger. Den samme positive korrelasjonen ser vi dessuten mellom BNP per innbygger / 
+							forventet levealder og antall covid-relaterte dødsfall i et land. Disse variablene er på henholdsvis 0.42 og 0.47, og 
+							korrelasjonen er vist i diagrammene nedenfor. Igjen har det antageligvis vært store mørketall her, 
+							spesielt i land med lav BNP per innbygger. Allikevell kan denne korrelasjonen muligens forklares med at mange land med 
+							høy forventet levealder og BNP har en høy andel eldre i befolkningen, og at Covid-19 har vært spesielt farlig for denne befolkningsgruppen.</p>
+						<img src="images/Cov13.PNG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 2em;">
+						<img src="images/Cov14.PNG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 2em;">
+					
+					</div>
+				</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+					</div>
+				</footer>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html><!DOCTYPE HTML>

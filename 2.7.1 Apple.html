@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio, Marco Peters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<a href="2.7.2 Apple.html" class="logo">
+								<span class="symbol"><img src="images/wordicon1.png" alt="" /></span><span class="title">English</span>
+							</a>
+								<a class="logo">
+								</span><span class="title">/</span>
+							</a>
+								<a class="logo">
+							</span><span class="title">Norsk</span>
+							</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Meny</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+						<nav id="menu">
+							<h1>M E N Y</h1>
+							<ul>
+							<li><a href="index.html">Hjem</a></li>
+							<li><strong>- Apple (Power BI analyse)</strong></a></li>
+							<li><a href="2.6.1 Airbnb.html">- Airbnb (Power BI rapport)</a></li>
+							<li><a href="2.5.1 Covid-19.html">- Covid-19 (Python prosjekt)</a></li>
+							<li><a href="2.4.1 Bysykkel.html">- Bysykkel (SQL / Power BI prosjekt)</a></li>
+							<li><a href="2.3.1 Iskald.html">- Iskald (Qlik dashboard)</a></li>
+							<li><a href="2.2.1 Priskalkyle.html">- Priskalkyle (Excel prosjekt)</a></li>
+							<li><a href="2.1.1 Sjomat.html">- Sjømat (Rapportoversikt)</a></li>
+							</ul>
+						</nav>
+
+				<!-- Main -->
+				<div id="main">
+					<div class="inner">
+						<h1>Prosjekt: Apple</h1>
+						<h4 style="margin-bottom: 0px;">Introduksjon</h4>
+						<p>	Som en del av en datakonkurranse i regi av Maven Analytics, analyserte jeg data
+							fra Apple's årlige miljørapport. I årets utgave av rapporten annonserte Apple store fremskritt mot målet deres
+							om "netto null" - null utslipp av klimagasser - innen 2030. Men viser dataen den samme fremgangen?
+							<br><br>
+							I min besvarelse laget jeg denne interaktive Power BI-rapporten som, basert på historisk data fra Apple, prosjekterer ulike
+							veier mot målet om null utslipp. Jeg fokuserte på hvor mye brutto utslipp av klimagasser (<i>gross greenhouse gas emissions</i>) 
+							har blitt redusert, både i absolutte og relative tall, og hvilken gjennomsnittlig årlig reduksjonsrate 
+							(<i>average yearly reduction rate</i>) som er nødvendig for at Apple skal nå målet. Rapporten ligger under her, klikk på 
+							bildet under for å prøve den i Power BI-appen. Oversatt oppgavebeskrivelse og analyse ligger også under her.</p>
+						<a href="https://app.powerbi.com/groups/me/reports/cac8c062-77b4-409b-a2b4-73ebcc16a0e9/ReportSection5beb6b13196d3158054c?experience=power-bi" class="logo">
+							<span class="image main"><img src="images/Apple1.PNG" alt="" /></span> </a>
+						<h4 style="margin-bottom: 0px;">Oppgavebeskrivelse</h4>
+						<p>	I 2020, etter å ha kunngjort at utslipp knyttet til Apple's virksomhetsstyring offisielt hadde blitt redusert til null, 
+							lovet Apple å også gjøre produktene sine karbonnøytrale innen 2030. For å nå dette målet har Apple brukt utslippene deres for 2015 
+							(38,4 millioner tonn CO2e) som utgangspunkt. Apple sitt mål er å redusere disse med 75 %, mens de resterende 25 % 
+							(9,6 millioner tonn CO2e) vil fjernes ved hjelp av CO2-kompensasjon. Min rapport består av et linjediagram, slicere og KPIer. 
+							I analysen har jeg brukt følgende forkortelser: (1) <i>gross greenhouse gas emissions </i> (GE), som er Apple's totale utslipp 
+							eksklusiv CO2-kompensasjon og (2) <i>average yearly reduction rate</i> (AYRR), som er gjennomsnittsraten som GE har blitt 
+							redusert med årlig. </p>
+						<h4 style="margin-bottom: 0px;">Analyse</h4>
+						<p>	Apple's GE, avbildet som en tykk blå linje, hadde en AYRR på 8,50 % mellom 2015 og 2022. Fordi både Apple's inntekter og 
+							markedsverdi vokste betydelig i løpet av denne perioden, la jeg til linjer som skildrer GE relativt til omsetning og GE relativt til 
+							markedsverdi. Disse linjene vises når den første sliceren slås på. Den andre y-aksen viser nå relative GE som en % av GE i 2015.
+							Slår man på den andre sliceren, vises karbonavtrykket til Apple's hovedprodukt, iPhonen, gjennom årene. Ettersom iPhone har utviklet seg 
+							til en kraftigere og mer allsidig maskin, inkluderte jeg en linje som viser karbonavtrykket relativt til lagring (eller kapasitet). 
+							Slår man på den tredje sliceren, vil det vises projeksjoner, altså forventede fremtidige nivåer av GE, gitt den AYRR-en valgt fra 
+							den fjerde sliceren. Her kan vi velge AYRR-en for i fjor, AYRR-en for de siste 3 årene, AYRR-en siden 2015 eller en prosentandel 
+							fra 1 til 20.
+							<br><br>
+							KPI-ene i hjørnet nederst til venstre indikerer den valgte AYRR-en for GE-linjen og de to relative GE-linjene. AYRR-en for de 3 
+							siste årene var på 6,29 %, og med denne AYRR-en vil målet om å redusere 75 % av GE sammenlignet med 2015 bli fullført i løpet av 
+							2034. For GE relativt til omsetning / markedsverdi var AYRR-en i denne perioden 18,41 % / 28,84 %, mens det forventede året for 
+							oppnåelse av målet vil med denne AYRR-en være 2026 / 2025. Den siste KPI-en viser at en AYRR på minst 9,11 % er nødvendig for å nå 
+							målet innen 2030. Tatt i betraktning dataen kombinert med disse projeksjonene, virker Apple's mål ambisiøst, men oppnåelig. 
+							Det er imidlertid noen fallgruver som må unngås. Det er viktig å redusere utslippet knyttet til produktenes livssyklus, ettersom 
+							de utgjør 99 % av alle Apple's GE. Til tross for fremgang på den totale GE-en økte karbonavtrykket til iPhonen 	mellom 2015 og 2022. 
+							Dessuten kan det vise seg å være utfordrende å fjerne 9,6 millioner tonn CO2e gjennom CO2-kompensasjon, ettersom det mellom 2015 og 
+							2022 kun ble fjernet 1,1 millioner tonn CO2e gjennom CO2-kompensasjon. </p>
+						<h4 style="margin-bottom: 0px;">Andre scenarioer (ved bruk av slicerne)</h4>
+							<img src="images/Apple2.png" style="float: left; width: 49.5%; margin-right: 0.3%; margin-bottom: 1em;">
+							<img src="images/Apple3.png" style="float: left; width: 49.5%; margin-bottom: 8em;"> 
+					</div>
+				</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+					</div>
+				</footer>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html><!DOCTYPE HTML>

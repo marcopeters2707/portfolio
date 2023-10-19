@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio, Marco Peters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<a class="logo">
+								<span class="symbol"><img src="images/wordicon1.png" alt="" /></span><span class="title">English</span>
+							</a>
+								<a class="logo">
+								</span><span class="title">/</span>
+							</a>
+								<a href="2.4.1 Bysykkel.html" class="logo">
+								</span><span class="title">Norsk</span>
+							</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<h1>M E N U</h1>
+					<ul>
+						<li><a href="1.2 Home.html">Home</a></li>
+						<li><a href="2.7.2 Apple.html">- Apple (Power BI analysis)</a></li>
+						<li><a href="2.6.2 Airbnb.html">- Airbnb (Power BI report)</a></li>
+						<li><a href="2.5.2 Covid-19.html">- Covid-19 (Python project)</a></li>
+						<li><strong>- Bike-sharing (SQL / Power BI project)</strong></a></li>
+						<li><a href="2.3.2 Icecold.html">- Icecold (Qlik dashboard)</a></li>
+						<li><a href="2.2.2 Price-calculus.html">- Price calculator (Excel project)</a></li>
+						<li><a href="2.1.2 Seafood.html">- Seafood (report overview)</a></li>
+						</ul>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Project: Bike-sharing</h1>
+							<h2 style="margin-bottom: 0px;">Introduction</h2>
+							<p>As part of Google's Data Analytics Professional Certificate, I did an analysis of Cyclistic, a fictional company that rents 
+								out city bikes in Chicago. Cyclistic users are offered both single tickets, day passes and annual memberships. The management 
+								at Cyclistic wants to convert more users from using single tickets and day passes to annual memberships, and therefore wants 
+								to map user behaviour. My task was therefore to create a report containing a description of the business task, which data 
+								is used, documentation of all data processing and a full analysis with visualisations, key findings and recommendations.</p>
+								<p style="margin-bottom: 0px;"> In this context, I have chosen to divide the customer group into two. The first group consists of customers who have 
+									previously bought single tickets or day passes. I have chosen to call this group "casual users" or casuals. The second 
+									group consists of "members", and consists of those who have made bought an annual membership. The business task is thus 
+									to understand in which ways these two customer groups use Cyclistic in order to map how casual users can be turned into 
+									members. </p>
+									<p></p>
+									
+								<h2 style="margin-bottom: 0px;">Data sources and data processing</h2>
+								<p>The dataset consists of user data from January to December 2021, where each observation is one trip completed by a 
+									Cyclistic user. Each data set is in csv format and I have used SQL / Google Big Query to process and analyze the data 
+									and Power BI to visualize the result. There are some limitations in the data that we should be aware of. "Classic bikes" 
+									or "docked bikes" refer to the same type of bike. All "docked bikes" are replaced by "classic bikes using REPLACE. 
+									Classic bikes are always collected and delivered at a bike station. Electric bikes however, have a bike lock, which 
+									allows users to park them anywhere near a bike station. I therefore remove observations for classic bikes that lack a 
+									start and end station, while for electric bikes I simply replace empty values with "bike lock". I consider all 
+									observations that are shorter than one minute or longer than one day not to be relevant customer data and are 
+									therefore removed. These can be incorrect registrations, tests carried out by Cyclistic or bikes that have been stolen. </p>
+									<img src="images/cyclistic_columns.jpg" style="float: right; width: 25%; margin-left: 10%; margin-bottom: 2em;">
+								<p>The data set consists of 5 595 063 rows, which means that almost 5.6 million trips were registered through Cyclistic 
+									in 2021. The data set is uploaded in Biq Query and consists of the following columns:</p>
+								<p style="margin-bottom: 0px;">1. <b>Ride_id</b> is a primary key with unique values.</p>
+								<p style="margin-bottom: 0px;">2. <b>Rideable_type</b> now consists of two different types of bikes: the classic bike and the electric bike.</p>
+								<p style="margin-bottom: 0px;">3. <b>Started_at</b> and <b>ended_at</b> refer to the date and time a trip started / ended.</p>	
+								<p style="margin-bottom: 0px;">4. <b>Start_station_name</b> and <b>end_station_name</b> are names of stations. </p>	
+								<p style="margin-bottom: 0px;">5. <b>I consider Start_station_id</b> and <b>end_station_id</b> as irrelevant for this analysis.</p>
+								<p style="margin-bottom: 0px;">6. <b>Start_lat</b>, <b>start_lng</b>, <b>end_lat</b> and <b>end_lng</b> refer to the coordinates of the start and end points.</p>	
+								<p >   						   7. <b>Member_casual</b> indicates wether a trip was conducted by a member or a casual user.</p>
+								<p>Using TIMESTAMP_DIFF I also add a column with the length of the trip in minutes.</p>
+								
+								<h2 style="margin-bottom: 0px;">Analysis and visualization</h2>
+								<p>To answer the business task, we should focus on any differences between the two user groups. As we have time series data, 
+									it can be interesting to look at when users use Cyclistic during the day, the week or the year. Therefore, I include a 
+									date, day, and time column in my query, as well as a "season" column. The entire query I uploaded to Power BI contained 
+									34,000 rows and looked like this:</p>
+									<img src="images/cyclistic_full_query.jpg" style="float: left; width: 90%; margin-right: 9%; margin-bottom: 2em;">
+								<p>The report I built in Power BI is presented underneath this section. I started by looking at the most important KPIs. 
+									In 2021, around 5 million trips were registered. Among these, 2.8 million were registered by members and 2.2 million 
+									by casual users. One bike trip lasted on average around 17 minutes, but while members spent an average of just below 13 
+									minutes on one trip, casual users spent just over 21 minutes. To see if casual users also ride longer distances, I used 
+									the so-called Haversine formula (see query). This formula calculates the average distance between the start and end station, 
+									which can give some indication of the distance traveled. The average distance between the start and end station on one 
+									bike trip is around 2.35 kilometres, with minimal differences between user groups. Of all registered trips around a third 
+									were conducted on electric bikes, which are slightly more popular among casual users.</p>
+									<img src="images/cyclistic_dashboard.jpg" style="float: right; width: 60%; margin-left: 3%; margin-bottom: 2em;">
+								<p>The line chart at the bottom left visualizes the number of trips per month, which shows a clear seasonal demand. Cyclistic is 
+									clearly used most from June to August, especially among casual users. The pie chart in the middle of the report shows 
+									that almost half (49%) of all bike trips registered by casual users were recorded during the summer months (June, July and 
+									August). Among members, the number of registered trips is spread slightly more evenly throughout the year.</p>
+								<p>Looking at the second pie chart and filtering for casual users, we notice that this user group uses Cyclistic mostly on 
+									Saturday and Sunday. Among this user group, 41% of all cycle trips in 2021 were actually registered on Saturday or Sunday. 
+									The corresponding figure among members is 26%. Among members, the service is actually used mostly from Tuesday to Friday. 
+									If we filter for weekdays only and look at the line chart at the bottom right, we notice another distinct pattern. 
+									Members seem to use the service mostly most during two time periods of the day: from around 07:00 to 09:00 and from 
+									17:00 to 19:00. In fact, 25% of all cycling trips among members were carried out between 07.00 and 09.00. Casual users also 
+									use the service most during this time period, but the pattern is not as clear.</p>
+									<img src="images/cyclistic_geomap.jpg" style="float: right; width: 60%; margin-left: 3%; margin-bottom: 1em;">
+								<p>Finally, let's take a look at the geodata. I plotted the 50 most popular starting and ending stations for both members 
+									and casual users in four different map charts. The results are shown on the right, and if we look closely, we can see a 
+									pattern here. The most popular stations among casual users are found along the coastline of Chicago, while members seem 
+									to move more in what appear to be urban areas.</p>
+								<h2 style="margin-bottom: 0px;"><b>Key findings</b></h2>
+								<p>Although it is too early to draw conclusions, there are several indications that members and casual users use Cyclistic 
+									for different purposes. <b>Members seem to use the service to get around in their daily lives, while casual users use the 
+										service mostly for leisure.</b></p>
+									<p>On average, casual users use more time for each bike ride, but they do not appear to travel larger distances than 
+										members. This may indicate that casual users try to get the most value out of their single tickets and day passes. 
+										Therefore it would be interesting to look at the prices of the various products. However, it may also indicate that
+										that casual users do not go directly from A to B and are not in as much of a hurry. Furthermore, casual users 
+										use Cyclistic mostly during the summer months and in weekends. They mostly seem to bike along Chicago's coastline, 
+										an area which is full of beaches, parks and other types of leisure attractions. This may again indicate that this user 
+										group uses the service to a greater extent for leisure.
+								<p>Members use Cyclistic mostly during weekdays and also to a greater extent year-round. They use this service mostly 
+									during rush hours, which may indicate that they use it mostly to commute to and from work. This idea is strengthened 
+									by the fact that the most popular stations among members are located in urban areas. However, we must keep in mind 
+									that this is aggregated data where one single user can register many bike rides. The data therefore does not show
+									how an average member or an average casual user uses Cyclistic.</p>
+								<h2 style="margin-bottom: 0px;">Recommendations</h2>
+								<p>If we remind ourselves of the business task, namely to map how casual users can be turned into members, then there are 
+									several ways forward. A good way to start is to do an even more thorough analysis. We should collect demographic and 
+									qualitative data (about user motivations, routines etc.) to find out for what purpose a user uses Cyclistic, what is 
+									important to this user and what he/she is willing to pay for the service. Demographic data such as income, address, 
+									age and BMI are also highly relevant. Through a user survey for instance, we may also test the hypothesis that members 
+									use the service to a large extent for communting in their daily lives, while casual users use it mostly for leisure.
+									This may help us uncover major opportunities or obstacles for turning casual users into members. It may for instance 
+									uncover that many are only on vacation or a weekend trip to Chicago, and therefore do not choose an annual membership.</p>
+								<p>More analysis takes up time and resources before any measures can be initiated, but it will give us a more thorough 
+									understanding of the situation. In addition, a benefit-cost analysis should be carried out regardless of which measures 
+									are being assessed to see if a certain measure will pay off. Changes can be expensive, and an increase in the number of 
+									memberships will possibly also increase costs. </p>
+								<p>We can however already think of some further measures that may affect various random users. Introducing holiday passes or 
+									weekend passes that only grant access to Cyclistic during holidays or weekends are examples of this. If further analysis 
+									shows that many casual users actually live in Chicago but lack motivation, Cyclistic can be marketed as a reasonable, 
+									healthy and climate-friendly alternative to using a car. Another measure could be a pricing model where a membership gives 
+									certain privileges, like being able to reserve a bike during rush hour. This will add increased predictability for those 
+									who may wish to use the service to and from work.
+							</div>
+						</div>
+						
+						
+										<!-- Footer -->
+											<footer id="footer">
+												<div class="inner">
+												</div>
+											</footer>
+						
+									</div>
+						
+								<!-- Scripts -->
+									<script src="assets/js/jquery.min.js"></script>
+									<script src="assets/js/browser.min.js"></script>
+									<script src="assets/js/breakpoints.min.js"></script>
+									<script src="assets/js/util.js"></script>
+									<script src="assets/js/main.js"></script>
+						
+						</body>
+						</html><!DOCTYPE HTML>

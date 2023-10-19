@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio, Marco Peters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<a href="2.6.2 Airbnb.html" class="logo">
+								<span class="symbol"><img src="images/wordicon1.png" alt="" /></span><span class="title">English</span>
+							</a>
+								<a class="logo">
+								</span><span class="title">/</span>
+							</a>
+								<a class="logo">
+							</span><span class="title">Norsk</span>
+							</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Meny</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+						<nav id="menu">
+							<h1>M E N Y</h1>
+							<ul>
+							<li><a href="index.html">Hjem</a></li>
+							<li><a href="2.7.1 Apple.html">- Apple (Power BI analyse)</a></li>
+							<li><strong>- Airbnb (Power BI rapport)</strong></a></li>
+							<li><a href="2.5.1 Covid-19.html">- Covid-19 (Python prosjekt)</a></li>
+							<li><a href="2.4.1 Bysykkel.html">- Bysykkel (SQL / Power BI prosjekt)</a></li>
+							<li><a href="2.3.1 Iskald.html">- Iskald (Qlik dashboard)</a></li>
+							<li><a href="2.2.1 Priskalkyle.html">- Priskalkyle (Excel prosjekt)</a></li>
+							<li><a href="2.1.1 Sjomat.html">- Sjømat (Rapportoversikt)</a></li>
+							</ul>
+						</nav>
+
+				<!-- Main -->
+				<div id="main">
+					<div class="inner">
+						<h1>Prosjekt: Airbnb</h1>
+						<h4 style="margin-bottom: 0px;">Introduksjon</h4>
+						<p>Denne one-pageren laget jeg som et eget prosjekt for å lære noen nye funksjoner i Power BI. Datasettene lastet jeg ned fra  
+							Kaggle og inneholder omfattende data på Airbnb-priser i noen av de mest populære byene i Europa. 
+							Hver rad i datasettet inneholder informasjon om én gjennomført overnatting via Airbnb i 2021. Dataen inneholder 
+							variabler som pris, lokasjon, dato, om man leier en hel leilighet eller et rom i en delt leilighet osv.  
+							I tillegg inneholder den informasjon om Airbnb-opplevelsen, som hvor fornøyd kunden var med oppholdet og om utleieren er en 
+							såkalt "superhost". Rapporten finner du under her, trykk på bildet for å teste det i Power BI-appen.
+						<br><br>
+						<a href="https://app.powerbi.com/groups/me/reports/cdc65a6c-2ee1-4707-a29d-06dedc25f98d/ReportSection?experience=power-bi" class="logo">
+							<span class="image main"><img src="images/Airbnb1.PNG" alt="" /></span> </a>
+						<h4 style="margin-bottom: 0px;">Analyse</h4>
+						<p>Etter å ha behandlet dataen i Power Query, inneholdt det samlede datasettet over 50 000 registrerte 
+							overnattinger fordelt på 10 ulike byer. Det er viktig å understreke at denne dataen 
+							ikke nødvendigvis er representabel for Airbnb-tilbudet i noen av byene. Det er mange faktorer som 
+							påvirker prisen på en overnatting, og denne dataen er ikke fullstendig nok til å gi grunnlag for 
+							noen konklusjoner.</p>
+						<p>I følge dataen er Amsterdam den dyreste byen å overnatte i via Airbnb. Med en gjennomsnittlig 
+							pris på 287 euro per natt er Amsterdam betraktelig dyrere enn Athen, som er den rimeligste av byene med 
+							en gjennomsnittlig pris på 88 euro per natt. Over halvparten av annonsene gjaldt overnatting i helgen, og prisnivået 
+							i helgene er cirka det samme som i ukedagene. Dette kan ha mange årsaker, for eksempel at både tilbud og 
+							etterspørsel er høyest i helgene. En faktor som har en tydelig påvirkning på prisene er om leiligheten er registrert 
+							som en såkalt "business listing". En leilighet registreres som "business listing" når utleieren mener at en leilighet 
+							er spesielt egnet for folk som er i byen grunnet "business". I byene med en relativt lav andel "business listings", 
+							er gjennomsnittsprisen på en overnatting høyere, noe som kan indikere at priser presses opp av ikke-business relaterte 
+							overnattinger. Andre prisdrivende faktorer er om leiligheten ligger i nærheten av byens sentrum, og ikke minst om 
+							den befinner seg i nærheten av en t-banestasjon.</p>
+						<p>Som et lite mini-case kombinerte jeg dette datasettet med priser på solgte leiligheter i Amsterdam i samme periode. 
+							Ettersom begge datasettene inneholdt lokasjon og pris, var det mulig å sammenligne ulike områder i byen og se om 
+							prisene på Airbnb og prisene leilighetene ble solgt for så ut til å "følge" hverandre. 
+							Den	rimeligste bydelen på Airbnb i Amsterdam var "Zuidoost" med en gjennomsnittlig døgnpris på 167 euro. Dette står i 
+							kontrast til prisene i sentrum, som gjennomsnittlig kostet 355 euro per natt. Denne prisforskjellen på over 100% er 
+							også reflektert i prisforskjellen på solgte leiligheter i disse to områdene. Kvadratmeterprisen ved salg er 
+							gjennomsnittlig også over 100% høyere i sentrum enn i "Zuidoost". I bydelen "Noord" leies leiligheter ofte ut via Airbnb
+							i ukedagene og som "business listings". Dette indikerer at dette er et område som er godt egnet for folk som 
+							besøker byen for "business". I denne bydelen er både prisen på overnattinger via Airbnb 
+							og kvadratmeterprisene ved salg betraktelig lavere enn i sentrum. Dette 
+							indikerer igjen at det ikke er business, men sannsynligvis turisme som driver opp prisene i en storby som Amsterdam.</p>
+					</div>
+				</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+					</div>
+				</footer>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html><!DOCTYPE HTML>
