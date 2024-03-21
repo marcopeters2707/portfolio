@@ -2746,7 +2746,7 @@ input, select, textarea {
 			}
 
 			.tiles article.style11 > .image:before {
-				background-color: #5A969F;
+				background-color: #F16668;
 			}
 
 			.tiles article.style12 > .image:before {
@@ -2754,7 +2754,11 @@ input, select, textarea {
 			}
 
 			.tiles article.style13 > .image:before {
-				background-color: #DD8757;
+				background-color: #DD8758;
+			}
+
+			.tiles article.style14 > .image:before {
+				background-color: #00767A;
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
